@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TodoMvc.Models.TodoItemModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Task List</h2>
+<p class="float-right">
+    <a asp-action="Create">Create New Task</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Task Name
+            </th>
+            <th>
+                Task Priority
+            </th>
+            <th>
+                Is Completed?
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Priority)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCompleted)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id  })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
