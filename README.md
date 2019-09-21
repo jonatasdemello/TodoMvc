@@ -3,7 +3,7 @@ Todo task list in .Net Core
 
 This is a simple "To Do" list app, built on .net core 2.2
 
-Implementing so far:
+Implemented so far:
 
 - the repository pattern.
 - unit tests (using MSTest)
@@ -17,3 +17,10 @@ Some ideas to implement next:
 - List manager => create multiple lists
 - replace MVC views by soem FE framework (React? Angular?)
 
+## Build and Run
+
+```
+dotnet build
+
+dotnet run --project TodoMvc\TodoMvc.csproj
+```

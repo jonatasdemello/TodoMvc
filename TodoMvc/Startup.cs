@@ -36,7 +36,7 @@ namespace TodoMvc
             //services.AddDbContext<TodoContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TodoContext")));
 
             // To use EF the in-memory database:
-            services.AddDbContext<TodoContext>(options => options.UseInMemoryDatabase());
+            services.AddDbContext<TodoContext>(options => options.UseInMemoryDatabase("TodoMvcDB"));
 
             services.AddTransient<ITodoRepository, TodoRepository>();
 
