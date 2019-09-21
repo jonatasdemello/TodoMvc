@@ -15,7 +15,7 @@ Implemented so far:
 Some ideas to implement next:
 
 - List manager => create multiple lists
-- replace MVC views by soem FE framework (React? Angular?)
+- replace MVC views by some FE framework (React? Angular?)
 
 ## Build and Run
 
