@@ -8,13 +8,6 @@ namespace TodoMvc.Repository
 {
     public interface ITodoRepository
     {
-        IEnumerable<TodoItemModel> GetAll();
-        TodoItemModel Get(int id);
-        int Create(TodoItemModel model);
-        bool Edit(int id, TodoItemModel model);
-        bool Delete(int id);
-        bool Complete(int id, bool status);
-
         Task<IList<TodoItemModel>> GetAllAsync();
         Task<TodoItemModel> GetAsync(int id);
         Task<int> CreateAsync(TodoItemModel model);

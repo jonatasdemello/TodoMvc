@@ -17,65 +17,65 @@ namespace TodoMvc.Repository
             _context = context;
         }
 
-        public IEnumerable<TodoItemModel> GetAll()
-        {
-            var result = _context.TodoItems.ToList();
-            return result;
-        }
+        //public IEnumerable<TodoItemModel> GetAll()
+        //{
+        //    var result = _context.TodoItems.ToList();
+        //    return result;
+        //}
 
-        public TodoItemModel Get(int id)
-        {
-            var result = _context.TodoItems.Find(id);
-            return result;
-        }
+        //public TodoItemModel Get(int id)
+        //{
+        //    var result = _context.TodoItems.Find(id);
+        //    return result;
+        //}
 
-        public int Create(TodoItemModel model)
-        {
-            var res = _context.TodoItems.Add(model);
-            var result = _context.SaveChanges();
-            return result;
-        }
+        //public int Create(TodoItemModel model)
+        //{
+        //    var res = _context.TodoItems.Add(model);
+        //    var result = _context.SaveChanges();
+        //    return result;
+        //}
 
-        public bool Complete(int id, bool status)
-        {
-            var item = _context.TodoItems.Find(id);
-            if (item != null)
-            {
-                item.IsCompleted = status;
-                _context.Entry(item).State = EntityState.Modified;
-                var result = _context.SaveChanges();
-                return true;
-            }
-            return false;
-        }
+        //public bool Complete(int id, bool status)
+        //{
+        //    var item = _context.TodoItems.Find(id);
+        //    if (item != null)
+        //    {
+        //        item.IsCompleted = status;
+        //        _context.Entry(item).State = EntityState.Modified;
+        //        var result = _context.SaveChanges();
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
-        public bool Delete(int id)
-        {
-            var item = _context.TodoItems.Find(id);
-            if (item != null)
-            {
-                _context.TodoItems.Remove(item);
-                var result = _context.SaveChanges();
-                return true;
-            }
-            return false;
-        }
+        //public bool Delete(int id)
+        //{
+        //    var item = _context.TodoItems.Find(id);
+        //    if (item != null)
+        //    {
+        //        _context.TodoItems.Remove(item);
+        //        var result = _context.SaveChanges();
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
-        public bool Edit(int id, TodoItemModel model)
-        {
-            var item = _context.TodoItems.Find(id);
-            if (item != null)
-            {
-                item.IsCompleted = model.IsCompleted;
-                item.ItemName = model.ItemName;
-                item.Priority = model.Priority;
+        //public bool Edit(int id, TodoItemModel model)
+        //{
+        //    var item = _context.TodoItems.Find(id);
+        //    if (item != null)
+        //    {
+        //        item.IsCompleted = model.IsCompleted;
+        //        item.ItemName = model.ItemName;
+        //        item.Priority = model.Priority;
 
-                _context.Entry(item).State = EntityState.Modified;
-                var result = _context.SaveChanges();
-                return true;
-            }
-            return false;
-        }
+        //        _context.Entry(item).State = EntityState.Modified;
+        //        var result = _context.SaveChanges();
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
 
         // Async Methods
