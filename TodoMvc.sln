@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoMvc", "TodoMvc\TodoMvc.csproj", "{CA9F65D5-A0D1-412B-925C-E620996419C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestTodoMvc", "UnitTestTodoMvc\UnitTestTodoMvc.csproj", "{3AC71F92-D63F-4383-885A-9E946F17401E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{3AC71F92-D63F-4383-885A-9E946F17401E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
